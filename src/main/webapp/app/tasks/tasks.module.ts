@@ -7,10 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskListComponent } from './task-list/task-list.component';
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import {_MatMenuDirectivesModule, MatMenuModule} from "@angular/material/menu";
-import { MatDatepickerModule } from "@angular/material/datepicker";
-import { MatNativeDateModule } from "@angular/material/core";
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {_MatMenuDirectivesModule, MatMenuModule} from '@angular/material/menu';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [TaskFormComponent, TaskListComponent],

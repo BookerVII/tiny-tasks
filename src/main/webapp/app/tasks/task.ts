@@ -6,6 +6,6 @@ export interface Task {
   name: string;
   done: boolean;
   dueDate: string;
-  created: string,
-  modified: string
+  created: string;
+  modified: string;
 }

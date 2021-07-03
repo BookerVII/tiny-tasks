@@ -19,9 +19,9 @@ export interface TaskService {
    *
    * @param name the task's name
    * @param done, default=false
-   * @param dueDate
-   * @param created
-   * @param modified
+   * @param dueDate due date if task
+   * @param created when task is created
+   * @param modified when task is modified
    * @returns an `Observable` holding the created task
    */
   create(name: string, done: boolean, dueDate: string, created: string, modified: string): Observable<Task>;
@@ -36,25 +36,25 @@ export interface TaskService {
 
   /**
    * Updates the task with the given ID from the list of tasks
-   * @param id
+   * @param id of task
    * @param done boolean whether task is done
    * @param name of the task
-   * @param dueDate
-   * @param created
-   * @param modified
+   * @param dueDate due date if task
+   * @param created when task is created
+   * @param modified when task is modified
    * @return empty `Observable` //? not sure what that is
    */
 
-  update(id: string,name: string, done: boolean, dueDate: string, created: string, modified: string): Observable<Task>
+  update(id: string, name: string, done: boolean, dueDate: string, created: string, modified: string): Observable<Task>;
 
   /**
    *  Updates the task done status from default: false to true
    *  @param id of the task
    *  @param toggleDone boolean state of done
-   *  @param modified
+   * @param modified when task is modified
    */
-  done(id: string, toggleDone: boolean, modified: string): Observable<Task>
+  done(id: string, toggleDone: boolean, modified: string): Observable<Task>;
 
-  edit(id: string, name: string, dueDate: string, modified: string ): Observable<Task>
+  edit(id: string, name: string, dueDate: string, modified: string ): Observable<Task>;
 
 }

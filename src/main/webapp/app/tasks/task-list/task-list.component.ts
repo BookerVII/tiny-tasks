@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, Output
 
 import { Task } from '../task';
 import { TaskService } from '../task.service';
-import {MatIcon} from "@angular/material/icon";
+import {MatIcon} from '@angular/material/icon';
 
 /**
  * A list of tiny tasks.
@@ -24,30 +24,28 @@ export class TaskListComponent {
   constructor(@Inject('TaskService') private taskService: TaskService) { }
 
   delete(task: Task): void {
-    console.log("delete in task-list called on : "+task)
     this.taskService.delete(task.id).subscribe(() => {
-      console.log("deleted",task.id)
       this.deleted.emit(task);
     });
   }
 
 
   done(task: Task): Task {
-    let toggleDone = !task.done;
-    let modified = Date.now().toLocaleString();
-    this.taskService.done(task.id, toggleDone, modified ).subscribe(()=>{
-      this.donesky.emit(task)
+    const toggleDone = !task.done;
+    const modified = Date.now().toLocaleString();
+    this.taskService.done(task.id, toggleDone, modified ).subscribe(() => {
+      this.donesky.emit(task);
     });
     return task;
   }
 
   edit(task: Task): Task {
-    let modified = Date.now().toLocaleString();
-    let name = "";
-    let dueDate = "";
-    this.taskService.edit(task.id, name, dueDate, modified ).subscribe(()=>{
+    const modified = Date.now().toLocaleString();
+    const name = '';
+    const dueDate = '';
+    this.taskService.edit(task.id, name, dueDate, modified ).subscribe(() => {
 
-    })
+    });
     return task;
   }
 
