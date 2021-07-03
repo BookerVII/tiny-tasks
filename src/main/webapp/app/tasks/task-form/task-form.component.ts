@@ -19,7 +19,8 @@ export class TaskFormComponent {
   @Output() donesky: EventEmitter<Task> = new EventEmitter();
 
   taskForm: FormGroup = new FormGroup({
-    name: new FormControl('', Validators.required)
+    name: new FormControl('', Validators.required),
+    dueDate: new FormControl('')
   });
 
   constructor(@Inject('TaskService') private taskService: TaskService) { }

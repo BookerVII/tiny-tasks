@@ -27,7 +27,7 @@ class TaskController {
   public TaskResponse createTask(@RequestBody @Valid TaskRequest taskRequest) {
     log.debug("createTask(createTask={})", taskRequest);
     if(taskRequest.getDueDate()==null){
-      taskRequest.setDueDate(LocalDate.now().minusYears(500L));
+      taskRequest.setDueDate(LocalDate.now());
     }
     taskRequest.setCreated(Instant.now());
     taskRequest.setModified(taskRequest.getCreated());
