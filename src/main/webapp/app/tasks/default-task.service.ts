@@ -33,7 +33,7 @@ export class DefaultTaskService implements TaskService {
   }
 
   edit(id: string, ): Observable<Task> {
-    return this.http.put<Task>(this.baseUrl+'/tasks/'+id,{id,})
+    return this.http.put<Task>(this.baseUrl + '/tasks/'+id,{id,})
   }
 
 }
