@@ -1,8 +1,9 @@
 <button mat-icon-button aria-label="clear completed tasks" color="primary" class="clearTasks">
-  <mat-icon aria-label="clear completed tasks" (click)="clear()">delete</mat-icon> Delete tasks </button>
+  <mat-icon aria-label="clear completed tasks" (click)="clear()">delete</mat-icon> Delete tasks
+</button>
 
 <mat-list data-cy="task-list-completed" >
-  <mat-list-item *ngFor="let task of tasks" class="mat-elevation-z2" >
+  <mat-list-item *ngFor="let task of tasks" class="mat-elevation-z2">
 
     <mat-icon mat-list-icon >assignment</mat-icon>
     <h4 mat-line  *ngIf="!task.done">{{task.name}}</h4>

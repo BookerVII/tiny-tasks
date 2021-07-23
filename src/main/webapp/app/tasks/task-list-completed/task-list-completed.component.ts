@@ -24,7 +24,6 @@ export class TaskListCompletedComponent  {
     this.taskService.deleteCompleted().subscribe(() => {
       this.deleted.emit();
     });
-    //  this should delete all completed tasks
   }
 
 }

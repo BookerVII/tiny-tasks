@@ -37,6 +37,4 @@ export class TaskFormComponent {
       this.taskForm.reset();
     });
   }
-
-
 }
