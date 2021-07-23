@@ -35,6 +35,11 @@ export interface TaskService {
   delete(id: string): Observable<void>;
 
   /**
+   * Removes all tasks that are completed
+   */
+  deleteCompleted(): Observable<void>;
+
+  /**
    * Updates the task with the given ID from the list of tasks
    * @param id of task
    * @param done boolean whether task is done

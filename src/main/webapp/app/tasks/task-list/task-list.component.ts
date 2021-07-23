@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, Output
 
 import { Task } from '../task';
 import { TaskService } from '../task.service';
-import {MatIcon} from '@angular/material/icon';
 
 /**
  * A list of tiny tasks.
@@ -33,7 +32,8 @@ export class TaskListComponent {
   done(task: Task): Task {
     const toggleDone = !task.done;
     const modified = Date.now().toLocaleString();
-    this.taskService.done(task.id, toggleDone, modified ).subscribe(() => {
+    // tslint:disable-next-line:no-shadowed-variable
+    this.taskService.done(task.id, toggleDone, modified ).subscribe(task => {
       this.donesky.emit(task);
     });
     return task;
@@ -48,6 +48,7 @@ export class TaskListComponent {
     });
     return task;
   }
+
 
 }
 

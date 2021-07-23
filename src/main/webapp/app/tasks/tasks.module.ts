@@ -11,9 +11,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {_MatMenuDirectivesModule, MatMenuModule} from '@angular/material/menu';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { TaskListCompletedComponent } from './task-list-completed/task-list-completed.component';
 
 @NgModule({
-  declarations: [TaskFormComponent, TaskListComponent],
+  declarations: [TaskFormComponent, TaskListComponent, TaskListCompletedComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -27,6 +28,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDatepickerModule,
     MatNativeDateModule
   ],
-  exports: [TaskFormComponent, TaskListComponent]
+  exports: [TaskFormComponent, TaskListComponent, TaskListCompletedComponent]
 })
 export class TasksModule { }

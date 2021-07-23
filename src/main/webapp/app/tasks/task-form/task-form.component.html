@@ -3,18 +3,18 @@
   <mat-form-field>
 
     <input matInput type="text" formControlName="name" placeholder="Add a new tiny task" data-cy="task-input"  >
-    <mat-icon matSuffix aria-label="Add task"(click)="onSubmit()">send</mat-icon>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a due date" formControlName="dueDate" >
+
+
+      <mat-datepicker-toggle class="date-picker"  matSuffix [for]="picker"></mat-datepicker-toggle>
+
+      <mat-icon matSuffix aria-label="Add task" (click)="onSubmit()">send</mat-icon>
+
+      <mat-datepicker #picker ></mat-datepicker>
+
 
 
   </mat-form-field>
 
-  <mat-form-field>
-
-    <input matInput [matDatepicker]="picker" placeholder="Choose a due date" formControlName="dueDate" style="width: 80%">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker ></mat-datepicker>
-
-
-  </mat-form-field>
 
 </form>

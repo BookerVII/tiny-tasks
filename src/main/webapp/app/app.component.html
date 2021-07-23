@@ -10,6 +10,7 @@
   <section class="content">
     <div class="wrapper">
       <tiny-task-list [tasks]="tasks$ | async" (deleted)="deleted()"></tiny-task-list>
+      <tiny-task-list-completed [tasks]="tasks$"></tiny-task-list-completed>
     </div>
   </section>
 </div>

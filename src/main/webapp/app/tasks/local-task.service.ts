@@ -55,4 +55,8 @@ export class LocalTaskService implements TaskService {
     return undefined;
   }
 
+  deleteCompleted(): Observable<void> {
+    return undefined;
+  }
+
 }

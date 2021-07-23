@@ -36,4 +36,9 @@ export class DefaultTaskService implements TaskService {
     return this.http.put<Task>(this.baseUrl + '/tasks/' + id, {id, });
   }
 
+  deleteCompleted(): Observable<void>{
+    return this.http.delete<void>(this.baseUrl + '/tasks/' );
+  }
+
+
 }

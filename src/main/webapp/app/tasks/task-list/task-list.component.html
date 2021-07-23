@@ -1,11 +1,9 @@
-<mat-list data-cy="task-list">
-  <mat-list-item *ngFor="let task of tasks" class="mat-elevation-z1">
-    <mat-icon mat-list-icon>assignment</mat-icon>
+<mat-list data-cy="task-list" >
+  <mat-list-item *ngFor="let task of tasks" class="mat-elevation-z1" >
+    <mat-icon mat-list-icon >assignment</mat-icon>
     <h4 mat-line>{{task.name}}</h4>
-
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="tools" color="primary" class="tools">
       <mat-icon>more_vert</mat-icon>
-
       <mat-menu #menu="matMenu">
         <button mat-icon-button aria-label="Done task" color="primary" class="doneButton">
           <mat-icon aria-label="Done task" (click)="done(task)">done</mat-icon>
@@ -17,8 +15,6 @@
           <mat-icon aria-label="Delete task" (click)="delete(task)">delete</mat-icon>
         </button>
       </mat-menu>
-
     </button>
-
   </mat-list-item>
 </mat-list>
