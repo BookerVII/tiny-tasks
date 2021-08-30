@@ -18,12 +18,10 @@ export class TaskListCompletedComponent  {
   @Output() deleted: EventEmitter<Task> = new EventEmitter<Task>();
   constructor(@Inject('TaskService') private taskService: TaskService) { }
 
-
   // @ts-ignore
   clear(): void {
     this.taskService.deleteCompleted().subscribe(() => {
       this.deleted.emit();
     });
   }
-
 }

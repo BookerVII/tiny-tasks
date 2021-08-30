@@ -29,6 +29,12 @@ spring:
           starttls:
             enable: true
             required: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/ttask
+          jwk-set-uri: http://localhost:8083/auth/realms/ttask/protocol/openid-connect/certs
 
 logging:
   level:
