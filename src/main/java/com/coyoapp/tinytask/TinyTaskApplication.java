@@ -11,3 +11,5 @@ public class TinyTaskApplication {
   }
 
 }
+
+// https://javatodev.com/spring-boot-jwt-authentication/
