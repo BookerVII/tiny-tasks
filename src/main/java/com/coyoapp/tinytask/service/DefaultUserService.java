@@ -2,6 +2,7 @@ package com.coyoapp.tinytask.service;
 
 
 import com.coyoapp.tinytask.domain.User;
+import com.coyoapp.tinytask.dto.ApiUserRequest;
 import com.coyoapp.tinytask.dto.UserRequest;
 import com.coyoapp.tinytask.dto.UserResponse;
 import com.coyoapp.tinytask.exception.UserNotFoundException;
@@ -34,7 +35,7 @@ public class DefaultUserService implements UserService{
 
   @Override
   @Transactional
-  public UserResponse createUser(UserRequest userRequest) {
+  public UserResponse createUser(ApiUserRequest userRequest) {
     User user = mapperFacade.map(userRequest, User.class);
     return transformToResponse(userRepository.save(user));
   }

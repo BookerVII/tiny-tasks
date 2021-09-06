@@ -11,7 +11,7 @@ public class TinyTaskApplication {
   }
 
 }
-
+// https://docs.spring.io/spring-security/oauth/apidocs/overview-summary.html
 // https://javatodev.com/spring-boot-jwt-authentication/
 // https://github.com/spring-projects/spring-security/blob/main/oauth2/oauth2-resource-server/src/main/java/org/springframework/security/oauth2/server/resource/web/access/BearerTokenAccessDeniedHandler.java
 // https://www.tabnine.com/code/java/classes/org.springframework.security.oauth2.server.resource.web.access.BearerTokenAccessDeniedHandler
