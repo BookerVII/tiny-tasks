@@ -1,9 +1,6 @@
 package com.coyoapp.tinytask.service;
 
-import com.coyoapp.tinytask.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -18,23 +15,23 @@ public class DefaultEmailService {
   private JavaMailSender javaMailsender;
 
 
-  public void sendMailToUserReminderTasks(User user) throws MailException{
-    SimpleMailMessage mail = new SimpleMailMessage();
-    mail.setTo(user.getEmail());
-    mail.setSubject("Check you unfinished Tasks!");
-    mail.setFrom("noreply@tinytask.com");
-    mail.setText("");
-    javaMailsender.send(mail);
-  }
-
-  public void sendMailToMe() throws MailException {
-    SimpleMailMessage mail = new SimpleMailMessage();
-    mail.setTo("email1@domain.tld");
-    mail.setSubject("This is a test mail!");
-    mail.setFrom("email1@domain.tld");
-    mail.setText("Does this work!?");
-    javaMailsender.send(mail);
-  }
+//  public void sendMailToUserReminderTasks(User user) throws MailException{
+//    SimpleMailMessage mail = new SimpleMailMessage();
+//    mail.setTo(user.getEmail());
+//    mail.setSubject("Check you unfinished Tasks!");
+//    mail.setFrom("noreply@tinytask.com");
+//    mail.setText("");
+//    javaMailsender.send(mail);
+//  }
+//
+//  public void sendMailToMe() throws MailException {
+//    SimpleMailMessage mail = new SimpleMailMessage();
+//    mail.setTo("email1@domain.tld");
+//    mail.setSubject("This is a test mail!");
+//    mail.setFrom("email1@domain.tld");
+//    mail.setText("Does this work!?");
+//    javaMailsender.send(mail);
+//  }
 
   public void sendMailToMyselfButMime() throws  MessagingException {
     MimeMessage mimeMessage = javaMailsender.createMimeMessage();
